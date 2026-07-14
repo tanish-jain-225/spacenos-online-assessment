@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   RahuNow Redesign — Global Styles
+   Design System: Deep Indigo / Warm White / Gold Accent
+   ============================================================ */
+
+/* ── CSS Variables ── */
+:root {
+  --color-bg: #FAFAF8;
+  --color-surface: #FFFFFF;
+  --color-primary: #3730A3;
+  --color-primary-dim: #4338CA;
+  --color-secondary: #EEF2FF;
+  --color-accent: #D97706;
+  --color-accent-light: #FEF3C7;
+  --color-ink: #111827;
+  --color-muted: #6B7280;
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 4px 8px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.10);
+}
+
+/* ── Base Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ── Typography Utilities ── */
+.font-heading {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(55, 48, 163, 0.12);
+  color: inherit;
+}
+
+/* ── Focus Visible ── */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Section Spacing ── */
+.section-padding {
+  padding-top: clamp(64px, 8vw, 112px);
+  padding-bottom: clamp(64px, 8vw, 112px);
+}
+
+.section-padding-sm {
+  padding-top: clamp(40px, 5vw, 72px);
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+/* ── Container ── */
+.container-max {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(16px, 5vw, 40px);
+  padding-right: clamp(16px, 5vw, 40px);
+}
+
+/* ── Gradient Utilities ── */
+.gradient-primary {
+  background: linear-gradient(135deg, #3730A3 0%, #4338CA 100%);
+}
+
+.gradient-soft {
+  background: linear-gradient(180deg, #FAFAF8 0%, #F3F4F6 100%);
+}
+
+/* ── Ticker Pause on Hover ── */
+.ticker-wrapper:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Card Hover Transitions ── */
+.card-lift {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ── Navbar Backdrop ── */
+.navbar-backdrop {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Prose ── */
+.prose-clean p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #6B7280;
+}
+
+/* ── Mobile menu overlay ── */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 49;
+}
+
+/* ── FAQ Accordion ── */
+.faq-content {
+  overflow: hidden;
+}
