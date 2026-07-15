@@ -3,7 +3,7 @@
 A clean, light-theme redesign of the RahuNow homepage focused on usability, clarity, accessibility, and visual consistency.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4-38BDF8)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-38BDF8)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
@@ -125,13 +125,19 @@ The redesign introduces:
 
 Content is grouped into logical sections:
 
-- Hero
-- Features
-- Services
-- Benefits
-- Testimonials
-- FAQ
-- Footer
+- Hero (Introduction & Birth Chart Form)
+- Planetary Ticker (Live sky positions)
+- Stats (Trusted by numbers)
+- Services (Astrology tools)
+- Today's Astrology (Daily forecast & timing)
+- Birth Chart Preview (Interactive chart sample)
+- AI Assistant (Ask Guruji chat)
+- Features (Why choose us)
+- How It Works (Four-step timeline)
+- Testimonials (User stories)
+- FAQ (Accordion Q&A)
+- CTA (Final section redirect)
+- Footer (Directory & legal warnings)
 
 ---
 
@@ -162,25 +168,55 @@ A reusable design language was created including:
 # Project Structure
 
 ```
-app/
-│
-├── page.js
-├── layout.js
-│
-components/
-│
-├── Navbar.jsx
-├── Hero.jsx
-├── Features.jsx
-├── Services.jsx
-├── Testimonials.jsx
-├── FAQ.jsx
-├── Footer.jsx
-│
+src/
+├── app/
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js
+├── components/
+│   ├── layout/
+│   │   ├── Footer.js
+│   │   └── Navbar.js
+│   ├── sections/
+│   │   ├── AIAssistantSection.js
+│   │   ├── BirthChartPreview.js
+│   │   ├── CTASection.js
+│   │   ├── FAQSection.js
+│   │   ├── HeroSection.js
+│   │   ├── HowItWorksSection.js
+│   │   ├── PlanetaryTicker.js
+│   │   ├── ServicesSection.js
+│   │   ├── StatsSection.js
+│   │   ├── TestimonialsSection.js
+│   │   ├── TodayAstrology.js
+│   │   └── WhyChooseSection.js
+│   └── ui/
+│       ├── AnimatedCounter.js
+│       ├── Badge.js
+│       ├── Button.js
+│       ├── Card.js
+│       ├── Container.js
+│       ├── Heading.js
+│       ├── NewsletterForm.js
+│       └── SectionLabel.js
+├── constants/
+│   ├── faqs.js
+│   ├── features.js
+│   ├── horoscope.js
+│   ├── navigation.js
+│   ├── services.js
+│   ├── stats.js
+│   └── testimonials.js
+├── hooks/
+│   ├── useInView.js
+│   └── useScrollNavbar.js
+└── utils/
+    └── cn.js
 public/
 │
-styles/
-│
+├── favicon.ico
+└── icons/
+    └── logo.png
 README.md
 ```
 
