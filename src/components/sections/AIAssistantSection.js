@@ -87,6 +87,7 @@ export default function AIAssistantSection() {
 
   return (
     <section
+      id="ai-assistant"
       className="section-padding bg-white border-y border-border"
       aria-labelledby="ai-assistant-heading"
     >
@@ -126,6 +127,7 @@ export default function AIAssistantSection() {
                 className="p-5 space-y-4 max-h-[360px] overflow-y-auto scrollbar-thin"
                 role="log"
                 aria-label="Chat conversation"
+                aria-live="polite"
               >
                 {messages.map((msg, i) => (
                   <div
@@ -273,7 +275,16 @@ export default function AIAssistantSection() {
               ))}
             </ul>
 
-            <Button variant="primary" size="md" href="#birth-chart">
+            <Button
+              variant="primary"
+              size="md"
+              onClick={() => {
+                const input = document.getElementById('ai-question');
+                if (input) {
+                  input.focus();
+                }
+              }}
+            >
               <Sparkles className="w-4 h-4" aria-hidden="true" />
               Try Ask Guruji
             </Button>

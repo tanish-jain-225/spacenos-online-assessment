@@ -1,9 +1,18 @@
 'use client';
 
-import { Sparkles, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Twitter, Instagram, Youtube } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import NewsletterForm from '@/components/ui/NewsletterForm';
 import Image from 'next/image';
+
+const mapPathToSection = (path) => {
+  if (path === '/app') return '#ai-assistant';
+  if (path === '/panchang') return '#services';
+  if (path === '/horoscope' || path === '/transit-news') return '#today';
+  if (path === '/knowledge' || path === '/about') return '#how-it-works';
+  if (path === '/astrology-answers') return '#faq';
+  return '#birth-chart';
+};
 
 const TOOL_LINKS = [
   { label: 'Life Reading', href: '/kundli-predictions' },
@@ -39,6 +48,15 @@ const SOCIALS = [
 ];
 
 function FooterColumn({ heading, links }) {
+  const handleLinkClick = (e, path) => {
+    e.preventDefault();
+    const sectionId = mapPathToSection(path);
+    const target = document.querySelector(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div>
       <h3 className="text-label font-semibold uppercase tracking-widest text-ink-light mb-5">
@@ -48,8 +66,8 @@ function FooterColumn({ heading, links }) {
         {links.map((link) => (
           <li key={link.href}>
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
+              href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
               className="text-sm text-ink-muted hover:text-ink transition-colors duration-150 font-medium"
             >
               {link.label}

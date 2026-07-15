@@ -47,7 +47,7 @@ export const metadata = {
       'Discover your Vedic birth chart with AI-powered insights. Free, private, no sign-up.',
     images: [
       {
-        url: '/api/og?k=home',
+        url: '/icons/logo.png',
         width: 1200,
         height: 630,
         alt: 'RahuNow — Modern Vedic Astrology',
@@ -59,7 +59,7 @@ export const metadata = {
     title: 'RahuNow — Modern Vedic Astrology & AI Birth Chart Reading',
     description:
       'Discover your Vedic birth chart with AI-powered insights. Free, private, no sign-up.',
-    images: ['/api/og?k=home'],
+    images: ['/icons/logo.png'],
   },
   robots: {
     index: true,
@@ -73,7 +73,7 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/icons/icon.svg',
+    apple: '/icons/logo.png',
   },
 };
 

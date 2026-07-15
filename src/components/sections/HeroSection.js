@@ -38,12 +38,28 @@ export default function HeroSection() {
     time: '',
     place: '',
   });
+  const [errors, setErrors] = useState({
+    name: false,
+    date: false,
+    place: false,
+  });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.date || !formData.place) return;
+    
+    const newErrors = {
+      name: !formData.name.trim(),
+      date: !formData.date,
+      place: !formData.place.trim(),
+    };
+    
+    setErrors(newErrors);
+    
+    if (newErrors.name || newErrors.date || newErrors.place) {
+      return;
+    }
 
     setLoading(true);
     setSuccess(false);
@@ -56,6 +72,11 @@ export default function HeroSection() {
         date: '',
         time: '',
         place: '',
+      });
+      setErrors({
+        name: false,
+        date: false,
+        place: false,
       });
       // Reset back to idle after a few seconds
       setTimeout(() => setSuccess(false), 4000);
@@ -193,7 +214,7 @@ export default function HeroSection() {
                     htmlFor="hero-name"
                     className="block text-xs font-semibold text-ink-muted uppercase tracking-wider mb-1.5"
                   >
-                    Your Name
+                    Your Name <span className="text-rose-500" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="hero-name"
@@ -201,11 +222,21 @@ export default function HeroSection() {
                     type="text"
                     placeholder="e.g. Priya Sharma"
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full h-11 px-4 rounded-xl border border-border bg-gray-50 text-sm text-ink placeholder:text-ink-light focus:outline-none focus:ring-2 focus:ring-primary-800 focus:border-transparent focus:bg-white transition-all"
+                    onChange={(e) => {
+                      setFormData({ ...formData, name: e.target.value });
+                      if (errors.name) setErrors({ ...errors, name: false });
+                    }}
+                    className={`w-full h-11 px-4 rounded-xl border bg-gray-50 text-sm text-ink placeholder:text-ink-light focus:outline-none focus:ring-2 focus:border-transparent focus:bg-white transition-all ${
+                      errors.name
+                        ? 'border-rose-300 focus:ring-rose-500'
+                        : 'border-border focus:ring-primary-800'
+                    }`}
                     autoComplete="name"
                     suppressHydrationWarning
                   />
+                  {errors.name && (
+                    <p className="text-xs text-rose-500 mt-1">Please enter your name</p>
+                  )}
                 </div>
 
                 {/* Date + Time */}
@@ -215,19 +246,29 @@ export default function HeroSection() {
                       htmlFor="hero-date"
                       className="block text-xs font-semibold text-ink-muted uppercase tracking-wider mb-1.5"
                     >
-                      Date of Birth
+                      Date of Birth <span className="text-rose-500" aria-hidden="true">*</span>
                     </label>
                     <input
                       id="hero-date"
                       name="date"
                       type="date"
                       value={formData.date}
-                      onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="w-full h-11 px-4 rounded-xl border border-border bg-gray-50 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-primary-800 focus:border-transparent focus:bg-white transition-all"
+                      onChange={(e) => {
+                        setFormData({ ...formData, date: e.target.value });
+                        if (errors.date) setErrors({ ...errors, date: false });
+                      }}
+                      className={`w-full h-11 px-4 rounded-xl border bg-gray-50 text-sm text-ink focus:outline-none focus:ring-2 focus:border-transparent focus:bg-white transition-all ${
+                        errors.date
+                          ? 'border-rose-300 focus:ring-rose-500'
+                          : 'border-border focus:ring-primary-800'
+                      }`}
                       required
                       autoComplete="off"
                       suppressHydrationWarning
                     />
+                    {errors.date && (
+                      <p className="text-xs text-rose-500 mt-1">Date is required</p>
+                    )}
                   </div>
                   <div className="w-full sm:w-1/2">
                     <label
@@ -255,7 +296,7 @@ export default function HeroSection() {
                     htmlFor="hero-place"
                     className="block text-xs font-semibold text-ink-muted uppercase tracking-wider mb-1.5"
                   >
-                    Place of Birth
+                    Place of Birth <span className="text-rose-500" aria-hidden="true">*</span>
                   </label>
                   <input
                     id="hero-place"
@@ -263,11 +304,21 @@ export default function HeroSection() {
                     type="text"
                     placeholder="e.g. Mumbai, India"
                     value={formData.place}
-                    onChange={(e) => setFormData({ ...formData, place: e.target.value })}
-                    className="w-full h-11 px-4 rounded-xl border border-border bg-gray-50 text-sm text-ink placeholder:text-ink-light focus:outline-none focus:ring-2 focus:ring-primary-800 focus:border-transparent focus:bg-white transition-all"
+                    onChange={(e) => {
+                      setFormData({ ...formData, place: e.target.value });
+                      if (errors.place) setErrors({ ...errors, place: false });
+                    }}
+                    className={`w-full h-11 px-4 rounded-xl border bg-gray-50 text-sm text-ink placeholder:text-ink-light focus:outline-none focus:ring-2 focus:border-transparent focus:bg-white transition-all ${
+                      errors.place
+                        ? 'border-rose-300 focus:ring-rose-500'
+                        : 'border-border focus:ring-primary-800'
+                    }`}
                     autoComplete="off"
                     suppressHydrationWarning
                   />
+                  {errors.place && (
+                    <p className="text-xs text-rose-500 mt-1">Please enter your birth place</p>
+                  )}
                 </div>
 
                 {/* Submit */}

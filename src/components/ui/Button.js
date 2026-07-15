@@ -40,14 +40,15 @@ export default function Button({
 
   const handleClick = (e) => {
     if (href) {
-      e.preventDefault();
       if (href.startsWith('#')) {
+        e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      } else {
-        // Fallback scroll to birth chart form for other page routes
+      } else if (!href.startsWith('http') && !href.startsWith('//') && !href.startsWith('mailto') && !href.startsWith('tel')) {
+        // Fallback scroll to birth chart form for other relative page routes (which are not implemented in SPA)
+        e.preventDefault();
         const target = document.querySelector('#birth-chart');
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });

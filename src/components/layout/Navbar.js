@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useScrollNavbar } from '@/hooks/useScrollNavbar';
 import { NAV_LINKS } from '@/constants/navigation';
 import Button from '@/components/ui/Button';
@@ -20,6 +20,11 @@ export default function Navbar() {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const handleLoginClick = (e) => {
+    e.preventDefault();
+    alert('No login required! All computations and birth charts are calculated locally on your device to keep your personal data 100% private.');
   };
 
   return (
@@ -83,7 +88,7 @@ export default function Navbar() {
 
           {/* ── Desktop Actions ── */}
           <div className="hidden lg:flex items-center gap-3 flex-none">
-            <Button variant="ghost" size="sm" href="#login">
+            <Button variant="ghost" size="sm" href="#login" onClick={handleLoginClick}>
               Login
             </Button>
             <Button variant="primary" size="sm" href="#birth-chart">
@@ -138,6 +143,7 @@ export default function Navbar() {
             className="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
+            tabIndex={menuOpen ? 0 : -1}
             suppressHydrationWarning
           >
             <X className="w-5 h-5 text-ink-muted" aria-hidden="true" />
@@ -152,6 +158,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
+                  tabIndex={menuOpen ? 0 : -1}
                   className={cn(
                     'flex items-center px-4 py-3 rounded-xl text-base font-medium transition-colors',
                     'text-ink-muted hover:text-ink hover:bg-gray-50'
@@ -166,11 +173,23 @@ export default function Navbar() {
 
         {/* Drawer Footer Actions */}
         <div className="p-4 border-t border-border flex flex-col gap-3">
-          <Button variant="secondary" size="md" href="#login" className="w-full">
+          <Button
+            variant="secondary"
+            size="md"
+            href="#login"
+            className="w-full"
+            onClick={handleLoginClick}
+            tabIndex={menuOpen ? 0 : -1}
+          >
             Login
           </Button>
-          <Button variant="primary" size="md" href="#birth-chart" className="w-full"
+          <Button
+            variant="primary"
+            size="md"
+            href="#birth-chart"
+            className="w-full"
             onClick={() => setMenuOpen(false)}
+            tabIndex={menuOpen ? 0 : -1}
           >
             Get Your Reading
           </Button>

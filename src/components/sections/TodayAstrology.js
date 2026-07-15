@@ -90,11 +90,18 @@ export default function TodayAstrology() {
               >
                 <p className="text-sm text-ink leading-relaxed">{d.horoscope.summary}</p>
                 <div className="flex items-center gap-2 mt-1">
-                  <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                  <div
+                    className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden"
+                    role="progressbar"
+                    aria-valuenow={d.horoscope.score}
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-label={`Energy score: ${d.horoscope.score} out of 100`}
+                  >
                     <div
                       className="h-full rounded-full bg-amber-400 transition-all"
                       style={{ width: `${d.horoscope.score}%` }}
-                      aria-label={`Energy score: ${d.horoscope.score} out of 100`}
+                      aria-hidden="true"
                     />
                   </div>
                   <span className="text-xs font-semibold text-amber-600">{d.horoscope.score}/100</span>
