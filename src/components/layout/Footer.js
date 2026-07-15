@@ -109,7 +109,7 @@ export default function Footer() {
             </a>
             <p className="text-sm text-ink-muted leading-relaxed max-w-sm mb-8">
               Real Vedic astrology in plain words. Your exact birth sky read,
-              timed, and explained — with the classical source behind every
+              timed and explained — with the classical source behind every
               answer. Free. Private. On your device.
             </p>
 

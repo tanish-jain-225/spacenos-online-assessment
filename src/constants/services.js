@@ -5,7 +5,7 @@ export const SERVICES = [
     title: 'Birth Chart',
     subtitle: 'Kundli Reading',
     description:
-      'Your exact planetary positions at birth, computed using the classical Lahiri ayanamsa. Understand your strengths, challenges, and karmic patterns.',
+      'Your exact planetary positions at birth, computed using the classical Lahiri ayanamsa. Understand your strengths, challenges and karmic patterns.',
     href: '/kundli',
     tag: 'Free',
     color: 'indigo',
@@ -16,7 +16,7 @@ export const SERVICES = [
     title: 'Daily Horoscope',
     subtitle: 'Personalized Timing',
     description:
-      'Not generic sign-based forecasts. Your real transits for today — which planets activate your chart and what that means for love, work, and decisions.',
+      'Not generic sign-based forecasts. Your real transits for today — which planets activate your chart and what that means for love, work and decisions.',
     href: '/horoscope',
     tag: 'Daily',
     color: 'amber',
@@ -38,7 +38,7 @@ export const SERVICES = [
     title: 'Panchang',
     subtitle: 'Vedic Calendar',
     description:
-      'Tithi, Nakshatra, Yoga, Karana, and Rahu Kalam — the five classical elements of a Vedic day. Know the quality of time before you act.',
+      'Tithi, Nakshatra, Yoga, Karana and Rahu Kalam — the five classical elements of a Vedic day. Know the quality of time before you act.',
     href: '/panchang',
     tag: 'Free',
     color: 'emerald',
@@ -49,7 +49,7 @@ export const SERVICES = [
     title: 'Numerology',
     subtitle: 'Name & Birth Numbers',
     description:
-      'Vedic numerology aligned with your Jyotish chart. Life Path, Expression, and Soul Urge numbers connected to your planetary periods.',
+      'Vedic numerology aligned with your Jyotish chart. Life Path, Expression and Soul Urge numbers connected to your planetary periods.',
     href: '/numerology',
     tag: 'New',
     color: 'violet',
@@ -60,7 +60,7 @@ export const SERVICES = [
     title: 'Remedies',
     subtitle: 'Jyotish Upaya',
     description:
-      'Classical Vedic remedies — mantras, gemstones, and timing strategies — personalized to your chart\'s specific challenges and opportunities.',
+      'Classical Vedic remedies — mantras, gemstones and timing strategies — personalized to your chart\'s specific challenges and opportunities.',
     href: '/remedies',
     tag: 'Premium',
     color: 'orange',

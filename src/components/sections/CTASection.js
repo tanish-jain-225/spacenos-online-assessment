@@ -58,7 +58,7 @@ export default function CTASection() {
           </h2>
           <p className="text-body-lg text-white/70 max-w-lg mx-auto mb-10">
             Enter your birth details once. Read your life, time your
-            decisions, and return whenever you have a new question.
+            decisions and return whenever you have a new question.
           </p>
 
           {/* CTAs */}

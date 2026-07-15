@@ -12,7 +12,7 @@ const STEPS = [
     icon: FileText,
     title: 'Enter Your Birth Details',
     description:
-      'Date, time, and place of birth — once. No account, no email. The only input the engine ever needs to build your complete chart.',
+      'Date, time and place of birth — once. No account, no email. The only input the engine ever needs to build your complete chart.',
     detail: 'Date · Time · City',
   },
   {
@@ -28,7 +28,7 @@ const STEPS = [
     icon: BrainCircuit,
     title: 'AI Interprets Your Reading',
     description:
-      'Ask Guruji reads your chart and translates 200+ classical rules into plain language — love, career, timing, and what to do next.',
+      'Ask Guruji reads your chart and translates 200+ classical rules into plain language — love, career, timing and what to do next.',
     detail: '200+ Classical Rules · Timed Guidance',
   },
   {

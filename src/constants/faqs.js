@@ -3,13 +3,13 @@ export const FAQS = [
     id: 'free',
     question: 'Is RahuNow completely free?',
     answer:
-      'Yes — the Life Reading, birth chart, panchang, and daily companion are entirely free and run on your device. No account or email required to get started.',
+      'Yes — the Life Reading, birth chart, panchang and daily companion are entirely free and run on your device. No account or email required to get started.',
   },
   {
     id: 'what-can-it-tell',
     question: 'What can RahuNow actually tell me?',
     answer:
-      'Timed guidance across 13 life areas — love, marriage, career, money, health, and more. You\'ll see charts, dasha periods, active transits, and the best windows to act on important decisions.',
+      'Timed guidance across 13 life areas — love, marriage, career, money, health and more. You\'ll see charts, dasha periods, active transits and the best windows to act on important decisions.',
   },
   {
     id: 'ai-accuracy',
@@ -27,7 +27,7 @@ export const FAQS = [
     id: 'zodiac',
     question: 'Which zodiac and ayanamsa do you use?',
     answer:
-      'We use the Sidereal zodiac with the Lahiri ayanamsa — the standard for Vedic (Jyotish) astrology. This is different from Western astrology\'s Tropical zodiac, and is more commonly used by traditional Jyotish practitioners.',
+      'We use the Sidereal zodiac with the Lahiri ayanamsa — the standard for Vedic (Jyotish) astrology. This is different from Western astrology\'s Tropical zodiac and is more commonly used by traditional Jyotish practitioners.',
   },
   {
     id: 'real-decisions',

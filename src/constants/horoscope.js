@@ -25,7 +25,7 @@ export const TODAYS_DATA = {
     name: 'Abhijit Muhurat',
     time: '11:48 AM – 12:36 PM',
     quality: 'Excellent',
-    note: 'Favorable for contracts, decisions, and new beginnings',
+    note: 'Favorable for contracts, decisions and new beginnings',
   },
 };
 

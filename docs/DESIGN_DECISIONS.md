@@ -4,9 +4,9 @@ Assessment Submission by Tanish Sanghvi
 
 # Overview
 
-This document outlines the design, UX, and technical decisions made while redesigning the RahuNow website.
+This document outlines the design, UX and technical decisions made while redesigning the RahuNow website.
 
-The objective was **not simply to beautify the UI**, but to rethink the user experience from first principles and create a cleaner, more trustworthy, and more intuitive astrology platform.
+The objective was **not simply to beautify the UI**, but to rethink the user experience from first principles and create a cleaner, more trustworthy and more intuitive astrology platform.
 
 The redesign focuses on:
 
@@ -648,6 +648,6 @@ Potential future improvements include
 
 This redesign was approached as a complete UX and design improvement exercise rather than a cosmetic visual update.
 
-Every decision was made to improve clarity, consistency, usability, and maintainability while preserving the core purpose of the platform.
+Every decision was made to improve clarity, consistency, usability and maintainability while preserving the core purpose of the platform.
 
-The final result is a modern, responsive, scalable, and user-centric interface built using Next.js and Tailwind CSS, providing a significantly improved experience compared to the original website.
+The final result is a modern, responsive, scalable and user-centric interface built using Next.js and Tailwind CSS, providing a significantly improved experience compared to the original website.

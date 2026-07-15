@@ -22,7 +22,7 @@ export const metadata = {
     template: '%s | RahuNow',
   },
   description:
-    'Discover your Vedic birth chart with AI-powered insights. Free, private, and computed live — love, career, marriage timing in plain words. No sign-up required.',
+    'Discover your Vedic birth chart with AI-powered insights. Free, private and computed live — love, career, marriage timing in plain words. No sign-up required.',
   keywords: [
     'vedic astrology',
     'birth chart',
@@ -100,7 +100,7 @@ export default function RootLayout({ children }) {
                   name: 'RahuNow',
                   url: 'https://rahunow.com/',
                   description:
-                    'Free AI-assisted Vedic astrology — birth chart reading, daily timing, compatibility, and more.',
+                    'Free AI-assisted Vedic astrology — birth chart reading, daily timing, compatibility and more.',
                 },
                 {
                   '@type': 'WebSite',

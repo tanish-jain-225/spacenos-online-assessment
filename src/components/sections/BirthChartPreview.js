@@ -135,7 +135,7 @@ export default function BirthChartPreview() {
                 },
                 {
                   title: 'Planetary strengths (Shadbala)',
-                  desc: 'Planets are not just present — they are strong or weak based on direction, time, and active aspects.',
+                  desc: 'Planets are not just present — they are strong or weak based on direction, time and active aspects.',
                 },
                 {
                   title: 'Ashtakavarga score maps',

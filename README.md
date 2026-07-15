@@ -1,6 +1,6 @@
 # RahuNow Redesign – UI/UX Case Study
 
-A clean, light-theme redesign of the RahuNow homepage focused on usability, clarity, accessibility, and visual consistency.
+A clean, light-theme redesign of the RahuNow homepage focused on usability, clarity, accessibility and visual consistency.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3-38BDF8)
@@ -375,7 +375,7 @@ This project demonstrates:
 
 This project is an independent UI/UX redesign created solely for assessment purposes.
 
-The redesign is intended to demonstrate frontend development, user experience thinking, and interface design skills. All trademarks, branding, and original content belong to their respective owners.
+The redesign is intended to demonstrate frontend development, user experience thinking and interface design skills. All trademarks, branding and original content belong to their respective owners.
 
 ---
 

@@ -135,9 +135,9 @@ export default function HeroSection() {
             >
               Get a comprehensive, personalized analysis of your{' '}
               <strong className="font-semibold text-ink">
-                love, career, and timing
+                love, career and timing
               </strong>
-              . Free, private, and computed on your device in seconds.
+              . Free, private and computed on your device in seconds.
             </motion.p>
 
             {/* CTA Buttons */}

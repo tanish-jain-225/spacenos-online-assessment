@@ -37,7 +37,7 @@ const PROMPT_SUGGESTIONS = [
 
 const MOCK_ANSWERS = {
   'What does Saturn in 7th house mean?':
-    'Saturn in the 7th house represents key karmic growth in relationships. It brings structure, demanding patience, maturity, and deep commitment, which eventually translates to highly stable lifelong bonds after initial cycles of learning.',
+    'Saturn in the 7th house represents key karmic growth in relationships. It brings structure, demanding patience, maturity and deep commitment, which eventually translates to highly stable lifelong bonds after initial cycles of learning.',
   'When is my career peak period?':
     'Your professional peak is triggered when your 10th lord is activated by transits. The transit of Jupiter through Gemini in late 2025 launches a highly positive career expansion phase for you.',
   'Which planets affect my finances?':
@@ -242,7 +242,7 @@ export default function AIAssistantSection() {
             <p className="text-body text-ink-muted leading-relaxed mb-6">
               Ask Guruji is not a generic chatbot — it reads your specific
               chart and answers in the context of your planetary positions,
-              current dasha period, and active transits.
+              current dasha period and active transits.
             </p>
 
             <ul className="space-y-4 mb-8">
@@ -257,7 +257,7 @@ export default function AIAssistantSection() {
                 },
                 {
                   title: 'Timing guidance',
-                  desc: 'Not just "what" but "when" — specific windows, muhurtas, and dasha transitions.',
+                  desc: 'Not just "what" but "when" — specific windows, muhurtas and dasha transitions.',
                 },
               ].map((item) => (
                 <li key={item.title} className="flex gap-3">
